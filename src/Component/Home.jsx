@@ -14,25 +14,27 @@ const Home = () => {
           Hi, <br />I'm <span className="text-blue-500">Prince Patel</span>
         </h2>
         <h3 className="text-2xl font-light mb-6">
-          I'm a passionate Full Stack Developer <br />
-          specializing in <span className="text-blue-400 font-medium">React.js</span> & <span className="text-blue-400 font-medium">C# .NET Core</span>.
-        </h3>
+          I'm a passionate
+          span Full-Stack Developer <br />
+          with six month experience as an intern in building web applications and specializing in <span className="text-blue-400 font-medium">React.js</span> & <span className="text-blue-400 font-medium">C# .NET Core</span>.
+         </h3>
 
         <div className='flex py-4'>
           <a target='_blank' href="https://www.linkedin.com/in/prince-patel-811562283/">
-            <img className='w-10 h-10 hover:shadow-[0_0_30px_#808080] scale-90 hover:scale-100 rounded-full' src={linkdInImage} alt='LinkdIn'/> 
+            <img className='w-10 h-10 hover:shadow-[0_0_30px_#808080] scale-90 hover:scale-100 rounded-full' src={linkdInImage} alt='LinkdIn' />
           </a>
           <a target='_blank' href="https://github.com/Prince3963/" >
             <img className='w-10 ml-4 h-10 hover:shadow-[0_0_30px_#808080] scale-90 hover:scale-100 rounded-full' src={githubImage} alt="Github Iamge" />
           </a>
         </div>
         <a
-          href="/your-resume-link.pdf" // <-- Change this to actual resume link
+          href="/Prince_Resume.pdf"   // <-- yeh path public folder ka hota hai
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full  hover:shadow-[0_0_40px_#3b82f6] transition-all duration-500">
           View Resume
         </a>
+
       </div>
 
       {/* Right Section - Image */}

@@ -17,11 +17,11 @@ import tailwind from '../assets/Tailwind.png';
 const Skill = () => {
     return (
         <div className='bg-gray-900  text-white min-h-screen flex flex-col items-center pt-16'>
-            <h2 className=' text-blue-100 font-bold mt-10 text-4xl mb-24'>
-               ⚙️ Tools and Technologies I Used
+            <h2 className=' text-blue-100 font-bold mt-10 text-4xl mb-20'>
+               Tools and Technologies I Used
             </h2>
 
-            <div className='border-blue-200 border-2 p-4 rounded bg-gray-800'>
+            <div className='border-blue-200 border-2 p-4 m-2 mb-10 rounded-2xl bg-gray-800'>
 
                 {/* Images container */}
                 <div className='flex gap-10 mb-10'>
