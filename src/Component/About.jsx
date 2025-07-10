@@ -3,7 +3,7 @@ import img from '../assets/About_image.svg';
 
 const About = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center overflow-y-auto justify-evenly px-6 md:px-24 py-20 bg-gray-900 text-white min-h-screen mt-4">
+    <section id="about" className="flex flex-col md:flex-row items-center overflow-y-auto justify-evenly px-6 md:px-24  bg-gray-900 text-white min-h-screen ">
       
       {/* Left Section - Image */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center md:justify-end md:mr-12">

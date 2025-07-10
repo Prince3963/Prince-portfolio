@@ -46,7 +46,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="bg-gray-900 text-white min-h-screen px-6 py-20 mt-4">
+    <section id="projects" className="bg-gray-900 text-white min-h-screen px-6 py-20 mt-4">
       <h2 className="text-center text-4xl font-bold mb-14">My Projects</h2>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
