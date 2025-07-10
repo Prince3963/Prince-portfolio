@@ -4,88 +4,81 @@ import yummster from '../assets/Yummster.png';
 import realEstate from '../assets/realEstate.png';
 import eBazzar from '../assets/ebazzar.png';
 
+const projects = [
+  {
+    title: 'Car Rental Application',
+    img: car,
+    timeline: 'Jan 2023 - Feb 2023',
+    type: 'Mini Project',
+    description: [
+      'Admin: Manage car records.',
+      'Client: Login, select cars, and process payments.',
+    ],
+  },
+  {
+    title: 'Yummsters (Online Restaurant)',
+    img: yummster,
+    type: 'Main Project',
+    description: [
+      'Admin: Manage cuisines and discounts.',
+      'Client: Order food, reserve tables.',
+      'Manager: Facilitate order management.',
+    ],
+  },
+  {
+    title: 'Real Estate Website',
+    img: realEstate,
+    type: 'ICT Sem-1',
+    description: [
+      'Admin, Seller, and Buyer roles.',
+      'Search based on price, location, and type.',
+    ],
+  },
+  {
+    title: 'eBazzar (Online Shopping)',
+    img: eBazzar,
+    type: 'ICT Sem-2',
+    description: [
+      'Built using .NET (C#) backend and React.js frontend.',
+    ],
+  },
+];
+
 const Projects = () => {
-    return (
-        <div className="flex flex-col items-center px-8 md:px-24 py-20 bg-gray-900 text-white min-h-screen mt-4">
-            {/* Section title */}
-            <div className="text-4xl font-bold mb-10 text-center">
-                My Projects
-            </div>
+  return (
+    <section className="bg-gray-900 text-white min-h-screen px-6 py-20 mt-4">
+      <h2 className="text-center text-4xl font-bold mb-14">My Projects</h2>
 
-            {/* Projects list */}
-            <div className="flex flex-col md:flex-row gap-8 text-center">
-                {/* Project Card 1 */}
-                <div className="bg-gray-800 scale-100 hover:scale-95 p-4 rounded-lg shadow-md">
-                    <img
-                        src={car}
-                        alt="Car rental project"
-                        className="w-full h-40 object-cover rounded-md mb-4"
-                    />
-                    <h3 className="text-xl font-semibold">Car Rental Application</h3>
-                    <p className="text-sm mt-2">
-                        <strong>Timeline:</strong> Jan 2023 - Feb 2023 <br />
-                        <strong>Type:</strong> Mini Project <br />
-                        Developed an application for car rental with two panels:
-                        <ul className="list-disc pl-5 mt-2 text-left">
-                            <li>Admin: Manage car records.</li>
-                            <li>Client: Login, select cars, and process payments.</li>
-                        </ul>
-                    </p>
-                </div>
-
-                {/* Project Card 2 */}
-                <div className="bg-gray-800 scale-100 hover:scale-95 p-4 rounded-lg shadow-md">
-                    <img
-                        src={yummster}
-                        alt="Food application project"
-                        className="w-full h-40 object-cover rounded-md mb-4"
-                    />
-                    <h3 className="text-xl font-semibold">Yummsters (Online Restaurant)</h3>
-                    <p className="text-sm mt-2">
-                        <strong>Type:</strong> Main Project <br />
-                        Created an online restaurant application and website with three panels:
-                        <ul className="list-disc pl-5 mt-2 text-left">
-                            <li>Admin: Manage cuisines and discounts.</li>
-                            <li>Client: Order food, reserve tables.</li>
-                            <li>Manager: Facilitate order management.</li>
-                        </ul>
-                    </p>
-                </div>
-
-                {/* Project Card 3 */}
-                <div className="bg-gray-800 scale-100 hover:scale-95 p-4 rounded-lg shadow-md">
-                    <img
-                        src={realEstate}
-                        alt="Real estate web project"
-                        className="w-full h-40 object-cover rounded-md mb-4"
-                    />
-                    <h3 className="text-xl font-semibold">Real Estate Website</h3>
-                    <p className="text-sm mt-2">
-                        <strong>Project Type:</strong> ICT Sem-1 <br />
-                        Created a website with role-based controls for:
-                        <ul className="list-disc pl-5 mt-2 text-left">
-                            <li>Admin, Seller, and Buyer roles.</li>
-                            <li>Search functionality based on price range, location, and property type.</li>
-                        </ul>
-                    </p>
-                </div>
-
-                {/* Project Card 4 */}
-                <div className="bg-gray-800 scale-100 hover:scale-95 p-4 rounded-lg shadow-md">
-                    <img
-                        src={eBazzar}
-                        alt="Online shopping project"
-                        className="w-full h-40 object-cover rounded-md mb-4"
-                    />
-                    <h3 className="text-xl font-semibold">eBazzar (Online Shopping)</h3>
-                    <p className="text-sm mt-2">
-                        <strong>Project Type:</strong> ICT Sem-2 <br />
-                        Developed using .NET Framework (C#) with frontend implemented in React.js.
-                    </p>
-                </div>
-            </div>
-        </div>
-    );
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 rounded-lg shadow-md p-5 hover:scale-[0.98] transition-transform duration-300"
+          >
+            <img
+              src={project.img}
+              alt={project.title}
+              className="w-full h-40 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+            <p className="text-sm text-gray-300 mb-2">
+              <strong>Project Type:</strong> {project.type}
+            </p>
+            {project.timeline && (
+              <p className="text-sm text-gray-300 mb-2">
+                <strong>Timeline:</strong> {project.timeline}
+              </p>
+            )}
+            <ul className="list-disc list-inside text-sm text-gray-400 mt-2 space-y-1">
+              {project.description.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default Projects;

@@ -1,27 +1,27 @@
-import { useState } from 'react';
-import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './Component/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Component/Home';
 import About from './Component/About';
-import Skill from './Component/Skill';
+import Skills from './Component/Skill';
 import Projects from './Component/Projects';
-import Contact from './Component/contact';
+import Contact from './Component/Contact';
+import ScrollToTop from './Component/ScrollToTop';
 
 function App() {
+  
   return (
-    <div>
-        <Navbar />
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path='/skills' element={<Skill/>}/>
-          <Route path='/projects' element={< Projects/>}/>
-          <Route path='/contact' element= { < Contact/> }/>
-        </Routes>
-      
-    </div>
+    <>
+      <Navbar />
+     <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
   );
 }
 
