@@ -6,8 +6,9 @@ import linkdInImage from '../assets/linkedin_logo.png';
 import About from './About';
 import Skills from './Skill';
 import Projects from './Projects';
-import Contact from './Contact';
+// import Contact from './Contact';
 import Hero from './Hero';
+import Contact from './contact';
 
 const Home = () => {
   return (
@@ -76,7 +77,8 @@ const Home = () => {
 
       {/* 🔴 Contact Section */}
       <section id="contact" className="bg-gray-900 text-white -mt-32">
-        <Contact />
+        {/* <Contact /> */}
+        <Contact/>
       </section>
 
     </div>
