@@ -16,8 +16,8 @@ import tailwind from '../assets/Tailwind.png';
 
 const Skill = () => {
     return (
-        <div   id="skills" className='bg-gray-900  text-white min-h-screen flex flex-col items-center pt-16'>
-            <h2 className=' text-blue-100 font-bold mt-10 text-4xl mb-20'>
+        <div id="skills" className='bg-gray-900  text-white min-h-screen flex flex-col items-center pt-8'>
+            <h2 className=' text-blue-100 font-bold  text-4xl mb-20'>
                Tools and Technologies I Used
             </h2>
 

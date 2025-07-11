@@ -49,7 +49,7 @@ const Home = () => {
             {/* Resume Button */}
             <p className="text-sm text-gray-400 mb-3">Looking to collaborate or hire?</p>
             <a
-              href="/PrincePatelResume.pdf"
+              href="/Prince Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:shadow-[0_0_40px_#3b82f6] transition-all duration-500"
@@ -66,7 +66,7 @@ const Home = () => {
       </section>
 
       {/* 🔵 Skills Section */}
-      <section id="skills" className="bg-gray-900 text-white -mt-20">
+      <section id="skills" className="bg-gray-900 text-white ">
         <Skills />
       </section>
 
