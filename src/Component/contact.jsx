@@ -37,9 +37,10 @@ const Contact = () => {
     };
 
     return (
-        <div id="contact" className="bg-gray-900 text-white min-h-screen py-20 px-4">
+        <div id="contact" className="bg-gray-900 text-white py-20 px-6 md:px-16">
             <div className="flex justify-center mt-20">
                 <div className="bg-gray-800 rounded-2xl p-8 shadow-xl w-full max-w-lg">
+
                     <h2 className="text-3xl font-bold text-blue-500 text-center mb-6">Contact Me</h2>
 
                     {formSubmitted ? (
@@ -48,6 +49,7 @@ const Contact = () => {
                         </p>
                     ) : (
                         <form onSubmit={handleSubmit}>
+                            {/* Name Field */}
                             <div className="mb-4">
                                 <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
                                 <input
@@ -58,10 +60,11 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     placeholder="Enter your name"
-                                    className="bg-white text-black border border-blue-300 rounded-lg p-3 w-full"
+                                    className="bg-white text-black border border-blue-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 />
                             </div>
 
+                            {/* Email Field */}
                             <div className="mb-4">
                                 <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
                                 <input
@@ -72,10 +75,11 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     placeholder="Enter your email"
-                                    className="bg-white text-black border border-blue-300 rounded-lg p-3 w-full"
+                                    className="bg-white text-black border border-blue-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 />
                             </div>
 
+                            {/* Message Field */}
                             <div className="mb-6">
                                 <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
                                 <textarea
@@ -86,10 +90,11 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     placeholder="Enter your message"
-                                    className="bg-white text-black border border-blue-300 rounded-lg p-3 w-full resize-none"
+                                    className="bg-white text-black border border-blue-300 rounded-lg p-3 w-full resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 ></textarea>
                             </div>
 
+                            {/* Submit Button */}
                             <div className="flex justify-center">
                                 <button
                                     type="submit"
