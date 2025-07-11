@@ -14,7 +14,6 @@ const projects = [
       'Admin: Manage car records.',
       'Client: Login, select cars, and process payments.',
     ],
-    link: 'https://car-rental-example.com',
   },
   {
     title: 'Yummsters (Online Restaurant)',
@@ -25,7 +24,6 @@ const projects = [
       'Client: Order food, reserve tables.',
       'Manager: Facilitate order management.',
     ],
-    link: 'https://yummster-example.com',
   },
   {
     title: 'Real Estate Website',
@@ -35,7 +33,6 @@ const projects = [
       'Admin, Seller, and Buyer roles.',
       'Search based on price, location, and type.',
     ],
-    link: 'https://real-estate-example.com',
   },
   {
     title: 'eBazzar (Online Shopping)',
@@ -44,7 +41,6 @@ const projects = [
     description: [
       'Built using .NET (C#) backend and React.js frontend.',
     ],
-    link: 'https://ebazzar-example.com',
   },
 ];
 
@@ -78,14 +74,7 @@ const Projects = () => {
                 <li key={i}>{item}</li>
               ))}
             </ul>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
-            >
-              View Project
-            </a>
+           
           </div>
         ))}
       </div>
