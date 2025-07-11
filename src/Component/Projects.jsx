@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'Car Rental Application',
     img: car,
-    timeline: 'Jan 2023 - Feb 2023',
+    timeline: 'AUG 2023 - dec 2023',
     type: 'Mini Project',
     description: [
       'Admin: Manage car records.',
@@ -19,6 +19,7 @@ const projects = [
     title: 'Yummsters (Online Restaurant)',
     img: yummster,
     type: 'Main Project',
+    timeline: 'Jan 2024 - May 2024',
     description: [
       'Admin: Manage cuisines and discounts.',
       'Client: Order food, reserve tables.',
@@ -28,6 +29,7 @@ const projects = [
   {
     title: 'Real Estate Website',
     img: realEstate,
+    timeline: 'Aug 2024 - Dec 2024',
     type: 'ICT Sem-1',
     description: [
       'Admin, Seller, and Buyer roles.',
@@ -37,6 +39,7 @@ const projects = [
   {
     title: 'eBazzar (Online Shopping)',
     img: eBazzar,
+    timeline: 'Jan 2025 - Jun 2025',
     type: 'ICT Sem-2',
     description: [
       'Built using .NET (C#) backend and React.js frontend.',
