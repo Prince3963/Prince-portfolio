@@ -11,11 +11,12 @@ import Contact from './contact';
 const Home = () => {
   return (
     <div>
-
       {/* 🟢 Intro Section (Hero) */}
-      <section id="home" className="animate-fade-in flex flex-col md:flex-row items-center justify-center gap-16 px-6 bg-gray-900 text-white min-h-screen">
-        <div className="animate-fade-in flex flex-col md:flex-row items-center justify-center gap-16 px-6 md:px-20 py-20 bg-gray-900 text-white min-h-screen">
-
+      <section
+        id="home"
+        className="animate-fade-in flex flex-col md:flex-row items-center justify-center gap-16 px-6 bg-gray-900 text-white min-h-screen dark:bg-gray-900 dark:text-white"
+      >
+        <div className="animate-fade-in flex flex-col md:flex-row items-center justify-center gap-16 px-6 md:px-20 py-20 bg-gray-900 text-white min-h-screen dark:bg-gray-900 dark:text-white">
           {/* Left Section - Image */}
           <div className="flex justify-center mt-2 md:w-1/2 mb-8 md:mb-0">
             <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 scale-105 hover:scale-110 border-blue-500 shadow-[0_0_20px_#3b82f6] hover:shadow-[0_0_30px_#3b82f6] transition-all duration-400">
@@ -59,25 +60,24 @@ const Home = () => {
       </section>
 
       {/* 🟡 About Section */}
-      <section id="about" className="bg-gray-800 text-white -mt-20">
+      <section id="about" className="bg-gray-800 text-white dark:bg-gray-800 dark:text-white -mt-20">
         <About />
       </section>
 
       {/* 🔵 Skills Section */}
-      <section id="skills" className="bg-gray-900 text-white sm:px-12">
+      <section id="skills" className="bg-gray-900 text-white sm:px-12 dark:bg-gray-900 dark:text-white">
         <Skills />
       </section>
 
       {/* 🟣 Projects Section */}
-      <section id="projects" className="bg-gray-800 text-white ">
+      <section id="projects" className="bg-gray-800 text-white dark:bg-gray-800 dark:text-white">
         <Projects />
       </section>
 
       {/* 🔴 Contact Section */}
-      <section id="contact" className="bg-gray-900 text-white ">
+      <section id="contact" className="bg-gray-900 text-white dark:bg-gray-900 dark:text-white">
         <Contact />
       </section>
-
     </div>
   );
 };

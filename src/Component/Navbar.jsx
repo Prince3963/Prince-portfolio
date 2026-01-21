@@ -1,21 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X } from 'lucide-react'; // optional: icon library like lucide or heroicons
+import { Menu, X, Moon, Sun } from 'lucide-react'; // Moon and Sun for dark mode toggle
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    // Change the theme on body tag when toggled
+    if (!isDarkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  };
 
   const navLinkStyle = ({ isActive }) =>
     isActive
       ? 'text-yellow-400'
       : 'hover:text-gray-300 transition duration-200';
 
+  useEffect(() => {
+    // Check if dark mode is saved in local storage
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode === 'true') {
+      setIsDarkMode(true);
+      document.body.classList.add('dark');
+    }
+  }, []);
+
+  // Save dark mode setting to localStorage
+  useEffect(() => {
+    localStorage.setItem('darkMode', isDarkMode);
+  }, [isDarkMode]);
+
   return (
-    <nav className="bg-gray-800 text-white fixed top-0 left-0 w-full shadow-md z-50" role="navigation" aria-label="Main navigation">
+    <nav className="bg-gray-800 text-white fixed top-0 left-0 w-full shadow-md z-50 dark:bg-gray-900 dark:text-white" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="text-xl font-bold">
@@ -31,7 +56,7 @@ const Navbar = () => {
                 to="home"
                 smooth={true}
                 duration={500}
-                offset={-70} // navbar height adjust karne ke liye
+                offset={-70}
                 className="cursor-pointer hover:text-blue-500 transition duration-300"
                 onClick={closeMenu}
               >
@@ -43,7 +68,7 @@ const Navbar = () => {
                 to="about"
                 smooth={true}
                 duration={500}
-                offset={-70} // Adjusting for fixed navbar
+                offset={-70}
                 className="cursor-pointer hover:text-blue-500 transition duration-300"
                 onClick={closeMenu}
               >
@@ -55,7 +80,7 @@ const Navbar = () => {
                 to="skills"
                 smooth={true}
                 duration={500}
-                offset={-70} // Adjusting for fixed navbar
+                offset={-70}
                 className="cursor-pointer hover:text-blue-500 transition duration-300"
                 onClick={closeMenu}
               >
@@ -67,7 +92,7 @@ const Navbar = () => {
                 to="projects"
                 smooth={true}
                 duration={500}
-                offset={-70} // Adjusting for fixed navbar
+                offset={-70}
                 className="cursor-pointer hover:text-blue-500 transition duration-300"
                 onClick={closeMenu}
               >
@@ -79,7 +104,7 @@ const Navbar = () => {
                 to="contact"
                 smooth={true}
                 duration={500}
-                offset={-70} // Adjusting for fixed navbar
+                offset={-70}
                 className="cursor-pointer hover:text-blue-500 transition duration-300"
                 onClick={closeMenu}
               >
@@ -94,11 +119,20 @@ const Navbar = () => {
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
+
+          {/* Dark Mode Toggle Button */}
+          <button
+            onClick={toggleDarkMode}
+            aria-label="Toggle Dark Mode"
+            className="ml-4 p-2 rounded-full bg-gray-700 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-500 transition duration-300"
+          >
+            {isDarkMode ? <Sun size={24} color="#F59E0B" /> : <Moon size={24} />}
+          </button>
         </div>
 
         {/* Mobile Menu Dropdown */}
         {isOpen && (
-          <div className="md:hidden mt-2 space-y-4 p-4 bg-gray-800 rounded-lg">
+          <div className="md:hidden mt-2 space-y-4 p-4 bg-gray-800 rounded-lg dark:bg-gray-900">
             <Link to="home" smooth={true} duration={500} offset={-70} className={`${navLinkStyle} block`} onClick={closeMenu}>
               Home
             </Link>

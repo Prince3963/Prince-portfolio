@@ -3,6 +3,7 @@ import car from '../assets/CarRental.png';
 import yummster from '../assets/Yummster.png';
 import realEstate from '../assets/realEstate.png';
 import eBazzar from '../assets/ebazzar.png';
+import instantBid from '../assets/Auction.png';
 
 const projects = [
   {
@@ -41,6 +42,15 @@ const projects = [
     img: eBazzar,
     timeline: 'Jan 2025 - Jun 2025',
     type: 'ICT Sem-2',
+    description: [
+      'Built using .NET (C#) backend and React.js frontend.',
+    ],
+  },
+  {
+    title: 'instantBid (Online Auctions)',
+    img: instantBid,
+    timeline: 'Jun 2025 - Dec 2025',
+    type: 'ICT Sem-3',
     description: [
       'Built using .NET (C#) backend and React.js frontend.',
     ],
