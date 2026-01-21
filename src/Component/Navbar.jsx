@@ -121,13 +121,13 @@ const Navbar = () => {
           </div>
 
           {/* Dark Mode Toggle Button */}
-          <button
+          {/* <button
             onClick={toggleDarkMode}
             aria-label="Toggle Dark Mode"
             className="ml-4 p-2 rounded-full bg-gray-700 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-500 transition duration-300"
           >
             {isDarkMode ? <Sun size={24} color="#F59E0B" /> : <Moon size={24} />}
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu Dropdown */}
