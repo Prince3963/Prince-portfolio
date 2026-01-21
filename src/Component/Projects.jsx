@@ -66,12 +66,12 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 rounded-lg shadow-md p-5 transition-all cursor-pointer duration-300 transform hover:scale-105 hover:shadow-xl"
+            className="bg-gray-800 rounded-lg shadow-md p-5 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
           >
             <img
               src={project.img}
               alt={project.title}
-              className="w-full h-40 object-cover rounded-md mb-4 transition-transform duration-500 hover:scale-105"
+              className="w-full h-40 object-cover rounded-md mb-4 cursor-pointer transition-transform duration-500 hover:scale-105"
             />
             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
             <p className="text-sm text-gray-300 mb-2">
