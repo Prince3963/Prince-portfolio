@@ -62,7 +62,7 @@ const Projects = () => {
     <section id="projects" className="bg-gray-900 text-white px-6 py-20 mt-4 min-h-screen">
       <h2 className="text-center text-4xl font-bold mb-14">My Projects</h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 cursor-pointer lg:grid-cols-3 gap-10">
         {projects.map((project, index) => (
           <div
             key={index}
